@@ -20,7 +20,7 @@ const PORT = process.env.PORT;
 const CONNECTION = process.env.MONGO_URI;
 
 mongoose
-  .connect(CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(CONNECTION)
   .then(() =>
     server.listen(PORT, () => console.log(`Listening at Port ${PORT}`))
   )
