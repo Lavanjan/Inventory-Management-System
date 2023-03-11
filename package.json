@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --experimental-modules index.js"
+    "server": "nodemon -r esm index.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "nodemon": "^2.0.21"
   },
   "devDependencies": {
+    "esm": "^3.2.25",
     "rimraf": "^4.4.0",
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"
