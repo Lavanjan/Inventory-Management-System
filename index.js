@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const http = require("http");
 
 const UserRoute = require("./src/routes/user.js");
+const ItemRoute = require("./src/routes/item.js");
 
 const app = express();
 const server = http.createServer(app);
@@ -27,3 +28,4 @@ mongoose
   .catch((error) => console.log(`${error} did not connect`));
 
 app.use("/user", UserRoute);
+app.use("/item", ItemRoute);
